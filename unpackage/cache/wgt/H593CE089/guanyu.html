@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/guanyu.css">       <!--外部链接css-->
+    <title></title>
+</head>
+<body>
+    <div class="app">
+		<div class="konkon"></div>
+        <div class="header">
+			<button onclick="javascript:history.back(-1);"
+			style="width: 6px; height: 30px;opacity: 0;margin-left: 10px;"></button>
+		</div>
+		
+		
+	
+		<div class="kon"></div>
+		<div class="footer">
+			<h1>溪山-帮带娃</h1>
+			<h2>V1.0</h1>
+			<input id="jiancha" type="button" value="检查更新">
+			<h3></h3>
+			<h4>溪山宝宝团队版权所有</h4>
+			<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022-2023</h5>
+			<h5>客服 000</h5>
+		</div>
+    </div>
+	
+
+	<script>
+	document.addEventListener("plusready", function() {
+		// 注册返回按键事件
+		plus.key.addEventListener('backbutton', function() {
+			// 事件处理
+			history.back(-1);
+		}, false);
+	});
+	</script>
+	
+	<script>
+	var btn = document.getElementById('jiancha');
+	btn.onclick = function(){
+	        alert('目前是最新版哦~');
+	    }
+	</script>
+</body>
+
+</html>

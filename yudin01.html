@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/yudin01.css">       <!--外部链接css-->
+    <title></title>
+</head>
+<body>
+    <div class="app">
+		<div class="konkon"></div>
+        <div class="header">
+			<button onclick="javascript:history.back(-1);"
+			style="width: 6px; height: 30px;opacity: 0;margin-left: 10px;"></button>
+		</div>
+		<img src="img/imag15.png"  style="height: 1px; background-repeat: no-repeat;"/>
+		<div class="text">宝宝巴士托管班</div>
+		
+		<img src="img/imag15.png"  style="height: 1px; background-repeat: no-repeat;margin-left: 5%;margin-right: 5%; margin-top: 10px;"/>
+            <div class="slide-box">
+			    <div class="slide-item1"></div>
+				<div class="slide-item2"></div>
+				<div class="slide-item3"></div>
+				<div class="slide-item4"></div>
+				<div class="slide-item5"></div>
+				<div class="slide-item6"></div>
+				<div class="slide-item7"></div>
+			</div>
+			<img src="img/imag15.png"  style="height: 1px; background-repeat: no-repeat;margin-left: 5%;margin-right: 5%; margin-top: 20px;"/>
+			
+			<div class="main_con">
+				<img src="img/imag33.png" style="width: 38%;margin-left: 31%;margin-top: 8%;"/>
+				<img src="img/imag34.png" style="width: 28%;margin-left: 38%;margin-top: 7%;"/>
+			</div>
+			<img src="img/imag15.png"  style="height: 1px;width: 87%; background-repeat: no-repeat;margin-left: 5%;margin-top: 50px;"/>
+			
+			<img src="img/imag35.png" style="width: 58%;margin-left: 22%;margin-top: 2%;"/>
+
+
+        
+		<div class="footer">
+
+		</div>
+    </div>
+	<script>
+	document.addEventListener("plusready", function() {
+		// 注册返回按键事件
+		plus.key.addEventListener('backbutton', function() {
+			// 事件处理
+			history.back(-1);
+		}, false);
+	});
+	</script>
+</body>
+
+</html>

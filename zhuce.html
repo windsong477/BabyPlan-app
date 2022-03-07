@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册页面</title>
+		<link rel="stylesheet" type="text/css" href="css/zhuce.css">       <!--外部链接css-->
+	</head>
+	<body>
+		<div class ="zhuce">
+			<div class="zhuce_back" >
+				<div style="background-image: url(img/imag25.png);
+				background-repeat: no-repeat; background-size:10%; background-position: 98% 110px;"></div>
+			</div>
+			<div class ="zhuce_bg_img">
+				
+			</div>
+			<div class ="zhuce_bg">
+				<div style="background-image: url(img/imag10.png); 
+				background-repeat: no-repeat;background-position: center 230px; background-size: 40%;"></div>
+				
+				
+				<div class="user_bg">
+					<div class="user_text">手机号</div>
+				</div>
+				<div class="user_line"></div>
+				
+				<div class="anser_bg"></div>
+				    <div class="anser_text">密  码</div>
+				<div class="anser_line"></div>
+				
+				<div class="anser_2_bg"></div>
+				    <div class="anser_2_text">密  码</div>
+				<div class="anser_2_line"></div>
+				
+				<div class="yanzhenma_bg"></div>
+				    <div class="yanzhenma_text">验证码</div>
+				<div class="yanzhenma_line"></div>
+				
+				<div class="xiahua"></div>
+				<div class="xiahua_text">使用第三方注册</div>
+				<div style="background-image: url(img/imag02.png);
+				background-repeat: no-repeat;background-position: center 1400px; background-size: 6%;"> </div>
+	
+	            <input class="huoquyanzhengma"type="submit"value="获取验证码" >
+				<input class="btn"type="submit"value="确定" onclick="window.location.href='index.html'">
+				<input class="user" type="search" placeholder="请输入手机号码"
+				maxlength="11" step="0.000000000000000001" enterkeyhint="done" pattern="[0-9]*" autocomplete="off">
+		
+				<input class="anser" type="password" placeholder="请输入密码"
+				maxlength="20" step="" enterkeyhint="done" autocomplete="off" >
+				
+				<input class="anser_2" type="password" placeholder="再次输入密码"
+				maxlength="20" step="" enterkeyhint="done" autocomplete="off" >
+			
+				<input class="yanzhenma" type="text" 
+				maxlength="6" step="0.000000000000000001" enterkeyhint="done" pattern="[0-9]*" autocomplete="off">
+			</div>
+			<button onclick="javascript:history.back(-1);"
+			style="width: 5%; height: 3%; top: 4.5%;left: 2.2%;opacity: 0;"></button>
+		</div>
+		
+	<script>
+	document.addEventListener("plusready", function() {
+		// 注册返回按键事件
+		plus.key.addEventListener('backbutton', function() {
+			// 事件处理
+			history.back(-1);
+		}, false);
+	});
+	</script>
+	
+
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script>
+
+	</script>
+	</body>
+</html>

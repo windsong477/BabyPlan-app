@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="css/liaotian.css">       <!--外部链接css-->
+    <title>聊天</title>
+</head>
+<body>
+    <div class="app">
+		<div class="kon"></div>
+        <div class="header" style="background-image: url(img/icon_menu.png); background-repeat: 
+		no-repeat;background-size: 9%;" onclick="javascript:history.back(-1);">
+		星星托班-橘子姐姐
+		</div>
+		
+        <div class="con">
+           <ul class="content">
+               <!--欢迎-->
+           </ul>
+        </div>
+
+        <div class="footer">
+			<div id="user_face_icon">
+			    <img src="img/imag43.png" alt="">
+			</div>
+			<input  id="text" type="text" placeholder="说点什么吧..."  >
+			<span id="btn">发送</span>
+		</div>
+    </div>
+	<script>
+	        window.onload = function(){
+	            var arrIcon = ['img/imag43.png','img/touxian2.png'];//图片
+	            var num = 0;     //控制头像改变
+	            var iNow = -1;    //用来累加改变左右浮动
+	            var icon = document.getElementById('user_face_icon').getElementsByTagName('img');
+	            var btn = document.getElementById('btn');
+	            var text = document.getElementById('text');
+	            var content = document.getElementsByTagName('ul')[0];
+	            var img = content.getElementsByTagName('img');
+	            var span = content.getElementsByTagName('span');
+	
+	            icon[0].onclick = function(){
+	                if(num==0){
+	                    this.src = arrIcon[1];
+	                    num = 1;
+	                }else if(num==1){
+	                    this.src = arrIcon[0];
+	                    num = 0;
+	                }
+	            }
+	            btn.onclick = function(){
+	                if(text.value ==''){
+	                    alert('不能发送空消息');
+	                }else {
+	                    content.innerHTML += '<li><img src="'+arrIcon[num]+'"><span>'+text.value+'</span></li>';
+	                    iNow++;
+	                    if(num==0){
+	                        img[iNow].className += 'imgright';
+	                        span[iNow].className += 'spanright';
+	                    }else {
+	                        img[iNow].className += 'imgleft';
+	                        span[iNow].className += 'spanleft';
+	                    }
+	                    text.value = '';
+	                    // 内容过多时,将滚动条放置到最底端
+	                    content.scrollTop=content.scrollHeight;
+	                }
+	            }
+	        }
+	    </script>
+	
+    <script>
+	document.addEventListener("plusready", function() {
+		// 注册返回按键事件
+		plus.key.addEventListener('backbutton', function() {
+			// 事件处理
+			history.back(-1);
+		}, false);
+	});
+	</script>
+
+</body>
+
+</html>

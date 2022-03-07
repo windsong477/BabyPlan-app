@@ -1,0 +1,68 @@
+body,html{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+		position: fixed;
+    }
+    .app{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+		background-color: #ffffff;
+    }
+	.konkon{
+		height:4%;
+	}
+    .header{
+		height: 32px;
+		background-image: url(../img/icon_menu.png);
+		background-repeat: no-repeat;
+		background-size: 10%;
+    }
+	
+	.kon{
+		height: 110px;
+		width: 85%;
+		margin-left: 7.5%;
+		margin-top: 1%;
+		background-image: url(../img/imag45.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		box-shadow: 0px 6px 15px rgba(0, 0, 0, .5);
+		border-radius: 10px;
+	}
+	h1{
+		font-size: 14px;
+		margin-left: 37%;
+	}
+	.footer{
+		width: 78%;
+		height: 67%;
+		margin-top: 5%;
+		margin-left: 11%;
+		background-color: white;
+		box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+		border-radius: 10px;
+	}
+	.footer_2{
+		width: 75%;
+		height: 50%;
+		margin-left: 12.5%;
+		background-color: #ffe0e0;
+		border-radius: 5px;
+		font-size: 12px;
+		font-weight: 600;
+	}
+	input{
+		margin-top: 15%;
+		margin-left: 10px;
+		width: 48%;
+		height: 25px;
+		border: none;
+		outline: none;
+		border-radius: 15px;
+	}
+
+	

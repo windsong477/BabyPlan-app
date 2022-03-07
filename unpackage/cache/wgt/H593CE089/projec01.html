@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/public.css"/>
+    <style>
+        .outer{
+            width:500px;
+            margin:60px auto 0;
+        }
+        textarea{
+            resize: none;
+            width:100%;
+            height:68px;
+        }
+        .btn,.replay-box-btn{
+            width:80px;
+            height:30px;
+            margin-top: 20px;
+            line-height:30px;
+            text-align:center;
+            border-radius: 5px;
+            background: #00c1de;
+            color:#fff;
+            cursor: pointer;
+        }
+        .comment-con{
+            margin-top: 20px;
+        }
+        h4{
+            font-size:18px;
+            font-weight: bold;
+        }
+        .comment-msg{
+            width:380px;
+        }
+        .comment-name{
+            font-weight: bold;
+            margin-right:30px;
+        }
+        .comment-main p>span,.comment-main div>span{
+            display: block;
+            width: 80%;
+            padding:5px;
+            border-radius:5px;
+            background:#ccc;
+        }
+        .comment-main p>span{
+            float: left;
+        }
+        .comment-main div>span{
+            float: right;
+            color:#479EAB;
+        }
+        .comment-btn{
+            width:46px;
+            height:26px;
+            text-align:center;
+            line-height:26px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .replay-box{
+            display: none;
+            width:100%;
+        }
+        span.comment-time{
+            display: block;
+            line-height: 26px;
+            text-align: center;
+        }
+        .userImg,.manageImg{
+            width: 60px;
+            height:60px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <div class="outer">
+        <div class="clearfix">
+            <textarea placeholder="请输入评论内容"></textarea>
+            <div class="btn fr">提交</div>
+        </div>
+        <div class="comment-con">
+            <h4>评论</h4>
+            <ul></ul>
+        </div>
+    </div>
+</form>
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/method.js"></script>
+<script>
+    var commentJson=[
+        {
+            "id":0,
+            "name":"用户a",
+            "time":[
+                "2016-01-01 12:00:00","2016-01-02 12:02:00","2016-01-03 12:03:00"
+                ],
+            "text":[
+                {
+                   "status":"0","val":"text1"//status为0表示用户留言，status为1表示管理员回复
+                },
+                {
+                    "status":"1","val":"replay1"
+                },
+                {
+                    "status":"1","val":"replay2"
+                }
+            ],
+            "photo":"images/img1.png"
+        }
+    ];
+    var $ul=$(".comment-con>ul")[0];
+    show(commentJson);
+   function show(ary){
+       var str="";
+       $(ary).each(function(i,item){
+           str+="<li class='clearfix' rel="+item.id+"><img class='userImg' src='"+item.photo+"' class='fl'/><div class='fr comment-msg clearfix'><div>" +
+                   "<span class='comment-name'>"+item.name+"</span></div><div class='comment-main clearfix'>";
+                for(var x=0;x<item.text.length;x++){
+                   str+="<span class='comment-time'>"+item.time[x]+"</span>";
+                   if(item.text[x].status == "0"){
+                       str+="<p class='clearfix'><span>"+item.text[x].val+"</span></p>";
+                   }else{
+                       str+="<div class='clearfix'><span>"+item.text[x].val+"</span></div>";
+                   }
+           }
+           str+="</div><div class='comment-btn'>回复</div></div></li>";
+       });
+      $(".comment-con>ul").html(str);
+   }
+    show(commentJson);
+    $(".btn").on("click",function(){
+        var obj={},_val=$("textarea").val(),_name ="用户名",_time=method.getDate("-",":"),aryLen=commentJson.length,_photo="images/img1.png";
+        if(_val != ""){
+           obj={
+               "id":aryLen,
+               "name":_name,
+               "time":[_time],
+               "text":[{"status":"0","val":_val}],
+               "photo":_photo
+           };
+            commentJson.push(obj);
+            show(commentJson);
+            $("textarea").val("");
+        }else{
+            alert("请输入评论信息")
+        }
+    });
+    $(".comment-con ul").delegate($("div.comment-btn"),"click",function(e){
+        var ev = e || window.event;
+        var $this=$(ev.target);
+        var replayStr="",manageImg="images/img1.png";
+        if($this.hasClass("comment-btn")){
+            if($(".replay-box").length == 0){
+                replayStr+="<div class='clearfix replay-box'><div class='fl'><img class='manageImg' src='"+manageImg+"'/></div><div class='fr clearfix'><textarea></textarea><div class='replay-box-btn fr'>发布</div></div></div>";
+                if($this.siblings(".replay-box").length > 0){
+                    $this.siblings(".replay-box").css("display","block");
+                }else{
+                    $(replayStr).appendTo($this.parents(".comment-msg"));
+                    $this.siblings(".replay-box").css("display","block");
+                }
+            }else{
+                alert("您有未发表成功的评论，请发表成功后再回复新的评论")
+            }
+
+        }
+    }).delegate($(".replay-box-btn"),"click",function(e){
+        var ev = e || window.event;
+        var $this=$(ev.target);
+        if($this.hasClass("replay-box-btn")){
+            var _value=$this.siblings('textarea').val(),replayTime=method.getDate("-",":"),_actIndex=$this.parents("li").attr("rel");
+            var replayObj={
+                "status":"1","val":_value
+            };
+            if(_value != ""){
+                commentJson[_actIndex].time.push(replayTime);
+                commentJson[_actIndex].text.push(replayObj);
+                show(commentJson);
+                $this.siblings('textarea').val("");
+                $this.parents(".replay-box").remove()
+            }else{
+                alert("请填写回复内容")
+            }
+        }
+    })
+</script>
+
+<script>
+var method={
+  getDate:function (a,b){
+        //获取当前日期
+        //a表示年月日直接的分隔符，b表示时分秒之间的分隔符
+        var dateStr="",
+            nowT=new Date(),
+            nowYear=nowT.getFullYear(),
+            nowMonth=nowT.getMonth() + 1,
+            nowDay=nowT.getDate(),
+            nowHours=nowT.getHours(),
+            nowMinites=nowT.getMinutes(),
+            nowSeconds=nowT.getSeconds();
+        if(a){
+            dateStr= nowYear + a + method.zero(nowMonth) + a + method.zero(nowDay) + "    " + method.zero(nowHours) + b + method.zero(nowMinites) + b + method.zero(nowSeconds);
+        }else{
+            dateStr= nowYear + "年" + method.zero(nowMonth) + "月" + method.zero(nowDay) + "日" + "    " + method.zero(nowHours) + ":" + method.zero(nowMinites) + ":" + method.zero(nowSeconds);
+        }
+        return dateStr
+    }  
+}
+</script>
+</html>

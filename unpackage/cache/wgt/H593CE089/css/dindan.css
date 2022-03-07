@@ -1,0 +1,202 @@
+body,html{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .app{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+	.kon{
+		height: 5%;
+	}
+    .header{
+		height: 6.5%;
+		margin-top: 0.5%;
+        background-image: url(../img/imag19.png);
+		background-repeat: no-repeat;
+        background-size: 100%;
+    }
+	.kon1{
+		height: 3%;
+	}
+	.dindan_search{
+		height: 6%;
+		width: 90%;
+		margin-left: 5%;
+		border: none;
+		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+		border-radius: 10px;
+	}
+	.dindan_bg_search_button{
+		width: 83%; 
+		height: 94%;;
+		margin-left: 12%;
+		border: none;
+		border-radius: 10px;
+		font-size: 17px;
+		outline: none;
+	}
+	.kon2{
+		height: 2%;
+	}
+    .con{
+		margin-top: 5%;
+        background: #ffffff;
+        overflow: auto;
+        flex: 1;
+    }
+	 /*去掉滚动条*/
+	.con::-webkit-scrollbar{
+	    width:0; 
+	    height:0; 
+	    display: none;
+	}
+ 
+
+    .footer{
+		margin-top: 2px;
+		height: 50px;
+        background-color: #FFFFFF;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+	.main_bg_main_button{
+		width: 10%;
+		height: 74%;
+		margin-left: 7%;
+		margin-top: 2%;
+		background-image: url(../img/icon_main01.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-color: #FFFFFF;
+		border: none;
+		outline: none;
+	}
+	.main_bg_main_button:hover{
+		width: 10%;
+		height: 74%;
+		margin-left: 7%;
+		background-image: url(../img/icon_main.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-color: #FFFFFF;
+		border: none;
+	}
+	.main_bg_map_button{
+		width: 10%;
+		height: 74%;
+		margin-left: 8%;
+		background-image: url(../img/icon_map.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-color: #FFFFFF;
+		border: none;
+		outline: none;
+	}
+	.main_bg_map_button:hover{
+		width: 10%;
+		height: 74%;
+		margin-left:8%;
+		background-image: url(../img/icon_map01.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-color: #FFFFFF;
+		border: none;
+	}
+	.main_bg_xinxi_button{
+		width: 10%;
+		height: 74%;
+		margin-left: 8%;
+		background-image: url(../img/icon_message.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-color: #FFFFFF;
+		border: none;
+		outline: none;
+	}
+	.main_bg_xinxi_button:hover{
+		width: 10%;
+		height: 74%;
+		margin-left: 8%;
+		background-image: url(../img/icon_message01.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-color: #FFFFFF;
+		border: none;
+	}
+	.main_bg_dindan_button{
+		width: 10%;
+		height: 74%;
+		margin-left: 8%;
+		background-image: url(../img/icon_sell01.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-color: #FFFFFF;
+		border: none;
+		outline: none;
+	}
+	.main_bg_dindan_button:hover{
+		width: 10%;
+		height: 74%;
+		margin-left: 8%;
+		background-image: url(../img/icon_sell01.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-color: #FFFFFF;
+		border: none;
+	}
+	.main_bg_wode_button{
+		width: 10%;
+		height: 74%;
+		margin-left: 8%;
+		background-image: url(../img/icon_set.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-color: #FFFFFF;
+		border: none;
+		outline: none;
+	}
+	.main_bg_wode_button:hover{
+		width: 10%;
+		height: 74%;
+		margin-left: 8%;
+		background-image: url(../img/icon_set01.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-color: #FFFFFF;
+		border: none;
+	}
+	input[type=search]::-webkit-search-cancel-button{
+	    -webkit-appearance: none; 
+		position: relative; 
+		height: 20px; 
+		width: 20px; 
+		border-radius: 50%; 
+		background-image: url(../img/Cross.png);
+		background-size: 100%;
+	}
+	ul{
+	    list-style-type:none;
+	    margin:0;
+	    padding:0;
+	}
+	a{
+	    display:block;
+	    background-color: #ffffff;
+	    color:black;
+	    height: 9rem;
+	    text-decoration:none;
+		margin-top: 15px;
+		margin-left: 20px;
+		margin-right: 20px;
+		-webkit-tap-highlight-color: transparent;    //去掉点击a标签时出现的蓝色背景
+		-webkit-user-select: none;
+		-moz-user-focus: none;
+		-moz-user-select: none;
+	}
+	a:hover,a:active{
+	    background-color:#ffffff;
+	}

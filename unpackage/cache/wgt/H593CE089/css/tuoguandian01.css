@@ -1,0 +1,217 @@
+body,html{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .app{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+	.konkon{
+		height: 4%;
+	}
+    .header{
+		flex-direction: row;
+		height: 40px;
+		background-image: url(../img/icon_menu.png);
+		background-repeat: no-repeat;
+		background-size: 10%;
+    }
+	.text{
+		font-size: 20px;
+		font-weight: 600;
+		margin-left: 25%;
+		width: 150px;
+	}
+	.header div{
+		display: inline-block;
+		position: absolute;
+		margin-top: 5px;
+	}
+	.start{
+		width: 0px;
+	}
+	.kon{
+		height: 5%;
+	}
+	.main_con{
+		margin-top: 2%;
+		height: 20%;
+	}
+	#b1{
+		margin-top: 5%;
+		margin-bottom: 5%;
+		margin-left: 4%;
+		width: 29%;
+		height: 38px;
+		background-image: url(../img/imag27.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: 30px;
+		border: none;
+		outline: none;
+		background-color: #FFFFFF;
+	}
+	#b1:hover{
+		margin-left: 4%;
+		width: 29%;
+		height: 38px;
+		background-image: url(../img/imag27.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: 30px;
+		border: none;
+		outline: none;
+		background-color: #ffe6cc;
+	}
+	#b2{
+		width: 29%;
+		height: 37px;
+		background-image: url(../img/imag28.png);
+		background-size: 94%;
+		background-repeat: no-repeat;
+		background-position: center 80%;
+		border-radius: 30px;
+		border: none;
+		outline: none;
+		background-color: #FFFFFF;
+	}
+	#b2:hover{
+		width: 29%;
+		height: 37px;
+		background-image: url(../img/imag28.png);
+		background-size: 94%;
+		background-repeat: no-repeat;
+		background-position: center 80%;
+		border-radius: 30px;
+		border: none;
+		outline: none;
+		background-color: #ffe6cc;
+	}
+	#b3{
+		width: 29%;
+		height: 38px;
+		background-image: url(../img/imag29.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: 30px;
+		border: none;
+		outline: none;
+		background-color: #FFFFFF;
+	}
+	#b3:hover{
+		width: 29%;
+		height: 38px;
+		background-image: url(../img/imag29.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: 30px;
+		border: none;
+		outline: none;
+		background-color: #ffe6cc;
+	}
+	#time{
+		margin-left: 70%;
+		font-size: 15px;
+	}
+	.con2{
+		margin-top: 5%;
+		height: 10%;
+	}
+	.btn{
+		width: 37%;
+		height: 43px;
+		margin-top:2%;
+		margin-left: 55%;
+		background-color: rgba(255, 141, 26, 0.81);
+		border-radius: 30px;
+		font-size: 15px;
+		color: #FFFFFF;
+		border: none;
+	}
+	.btn:hover{
+		width: 37%;
+		height: 43px;
+		margin-top:2%;
+		margin-left: 55%;
+		background-color: rgba(255, 98, 7, 0.8);
+		border-radius: 30px;
+		font-size: 15px;
+		color: #FFFFFF;
+		border: none;
+		outline: none;
+	}
+    .footer{
+		margin-top: 2px;
+		height: 50px;
+    }
+	.slide-box{
+	            display: -webkit-box;
+				border-right: #6495ED;
+	            overflow-x: scroll;
+	            -webkit-overflow-scrolling:touch;
+				margin-top: 5px;
+				margin-left: 1px;
+	        }
+	        /*去掉滚动条*/
+	        .slide-box::-webkit-scrollbar{
+	            width:0; 
+	            height:0; 
+	            display: none;
+	        }
+	        .slide-item1{
+	            width: 250px;
+	            height: 250px;
+				background-image: url(../img/IMG_20220124_234840.jpg.png);
+				background-size: 100%;
+	            margin-right: 1px;
+	        }
+			.slide-item2{
+			    width: 250px;
+			    height: 250px;
+				background-image: url(../img/IMG_20220217_122750.jpg);
+				background-size: 100%;
+			    margin-right: 1px;
+			}
+			.slide-item3{
+			    width: 250px;
+			    height: 250px;
+				background-image: url(../img/1183ed76c66d5313.jpg);
+				background-size: 100%;
+			    margin-right: 1px;
+			}
+			.slide-item4{
+			    width: 250px;
+			    height: 250px;
+				background-image: url(../img/IMG_20220124_234855.jpg.png);
+				background-size: 100%;
+			    margin-right: 1px;
+			}
+			.slide-item5{
+			    width: 250px;
+			    height: 250px;
+				background-image: url(../img/IMG_20220217_122735.jpg);
+				background-size: 100%;
+			    margin-right: 1px;
+			}
+			.slide-item6{
+			    width: 250px;
+			    height: 250px;
+				background-image: url(../img/IMG_20220217_122811.jpg);
+				background-size: 100%;
+			    margin-right: 1px;
+			}
+			.slide-item7{
+			    width: 250px;
+			    height: 250px;
+				background-image: url(../img/IMG_20220217_122824.jpg);
+				background-size: 100%;
+			    margin-right: 1px;
+			}

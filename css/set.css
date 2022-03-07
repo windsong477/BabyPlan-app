@@ -1,0 +1,123 @@
+body,html{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+		position: fixed;
+    }
+    .app{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+		background-color: #EEEEEE;
+    }
+	.konkon{
+		height:4%;
+	}
+    .header{
+		height: 32px;
+		background-image: url(../img/icon_menu.png);
+		background-repeat: no-repeat;
+		background-size: 10%;
+    }
+	h2{
+		margin-left: 90%;
+		font-weight: 200;
+	}
+    ul{
+        list-style-type:none;
+        margin:0;
+        padding:0;
+    }
+	#main{
+		display:block;
+		background-color: #ffffff;
+		color:black;
+		height: 4em;
+		padding-left: 20px;
+		padding-top: 10px;
+		text-decoration:none;
+	}
+	#main_1{
+	    display:block;
+	    background-color: #ffffff;
+	    color:black;
+	    height: 1.9em;
+	    margin-top: 0.5em;
+	    padding-left: 10px;
+	    padding-top: 10px;
+	    text-decoration:none;
+	}
+    a{
+        display:block;
+        background-color: #ffffff;
+        color:black;
+        height: 1.9em;
+		margin-top: 0.5em;
+        padding-left: 10px;
+		padding-top: 10px;
+        text-decoration:none;
+		
+		-webkit-tap-highlight-color: transparent;    //去掉点击a标签时出现的蓝色背景
+		-webkit-user-select: none;
+		-moz-user-focus: none;
+		-moz-user-select: none;
+    }
+	#main:hover,#main:active{
+	    background-color:#a7aacb;
+	}
+    a:hover,a:active{
+        background-color:#a7aacb;
+    }
+	.kon{
+		height: 44%;
+	}
+	.footer{
+		height: 2.7em;
+	}
+	#tuichu{
+		background-color: #f5a4b7;
+		height: 100%;
+		width: 96%;
+		margin-left: 2%;
+		margin-right: 2%;
+		border-radius: 5px;
+		font-size: 17px;
+		text-decoration:none;
+		outline: none;
+		border: none;
+	}
+	.switch-wrap{
+	  position: relative;
+	  display: inline-block;
+	  width: 45px;
+	  height: 1.5em;
+	  border: 1px solid #DFDFDF;
+	  margin-left: 62%;
+	  outline: none;
+	  border-radius: 16px;
+	  box-sizing: border-box;
+	  background: #FFFFFF;
+	  cursor: pointer;
+	  transition: border-color .3s,background-color .3s;
+	  vertical-align: middle;
+	}
+	.switch-wrap span{
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  transition: transform 0.3s;
+	  width: 1.37em;
+	  height: 1.37em;
+	  border-radius: 50%;
+	  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+	  background-color: #fff;
+	}
+	.switch-wrap.active{
+	  border-color: #f5a4b7;
+	  background-color: #f5a4b7;
+	}
+	.switch-wrap.active span{
+	  transform: translateX(21px);
+	}

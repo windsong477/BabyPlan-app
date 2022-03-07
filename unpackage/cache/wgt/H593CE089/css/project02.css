@@ -1,0 +1,179 @@
+*{
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+.loadin_back{
+	background-image: url(../img/icon_menu.png);
+	left: 0px;
+	top: 4%;
+	background-repeat: no-repeat;
+	background-size: 8%;
+}
+.bg_img{
+	background-image: url(../img/imag07.png);
+	background-repeat: no-repeat;
+	background-position:center 7%;
+	background-size: 105%;
+	
+}
+.loadin_bg{
+	width: 78%;
+	height: 67%;
+	margin-top: 63%;
+	margin-left: 11%;
+	background-color: white;
+	box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3);
+	border-radius: 28px;
+	
+}
+.user{
+	left: 29%;
+	top: 50.1%;
+	width: 48%;
+	height: 70px;
+	border: none;
+	font-size: 220%;
+	outline: none;
+}
+.user:hover{
+	outline: none;
+}
+.user_bg{
+	left: 21%;
+	top: 50%;
+	width: 57%;
+	height: 70px;
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(166, 166, 166, 1);
+	border-radius: 20px;
+}
+.user_line{
+	left: 29%;
+	top: 50%;
+	width: 0px;
+	height: 3.5%;
+	border: 1px solid rgba(166, 166, 166, 1);
+
+}
+.anser{
+	left: 29%;
+	top: 57.1%;
+	width: 48%;
+	height: 3.3%;
+	border: none;
+	font-size: 220%;
+	outline: none;
+}
+.aner:hover{
+	outline: none;
+}
+.anser_bg{
+	left: 21%;
+	top: 57%;
+	width: 57%;
+	height: 3.5%;
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(166, 166, 166, 1);
+	border-radius: 20px;
+}
+.anser_line{
+	left: 29%;
+	top: 57%;
+	width: 0px;
+	height: 3.5%;
+	border: 1px solid rgba(166, 166, 166, 1);
+}
+.mima{
+	left: 72.5%;
+	top: 57.8%;
+	background-image: url(../img/Eye.png);
+	background-repeat: no-repeat;
+	background-size: 4.5%;
+}
+.btn{
+	left: 21%;
+	top: 64%;
+	width: 57%;
+	height: 4.5%;
+	background: linear-gradient(90deg, rgba(244, 198, 14, 1) 0%, rgba(255, 176, 97, 1) 100%);
+	box-shadow: 0px 6px 8px rgba(0, 0, 0, .5);
+	border-radius: 30px;
+	font-size: 35px;
+	border: none;
+}
+.btn:hover{
+	left: 21%;
+	top: 64%;
+	width: 57%;
+	height: 4.5%;
+	background: linear-gradient(90deg, rgba(244, 162, 19, 1.0) 0%, rgba(255, 163, 83, 1.0) 100%);
+	box-shadow: 0px 6px 8px rgba(0, 0, 0, .5);
+	border-radius: 30px;
+	font-size: 35px;
+	border: none;
+	outline: none;
+}
+.yanzhenma_text{
+	left: 42%;
+	top: 70%;
+	width: 17%;
+	height: 3%;
+	background-color: #FFFFFF;
+	border: none;
+	font-size: 30px;
+	outline: none;
+}
+.yanzhenma_text:hover{
+	text-decoration: underline;
+}
+.zhuce{
+	left: 21%;
+	top: 77%;
+	width: 8.5%;
+	height: 2.8%;
+	background-color: #FFFFFF;
+	border: none;
+	font-size: 33px;
+}
+.zhuce:hover{
+	text-decoration: underline;
+}
+.wanji{
+	left: 62%;
+	top: 77%;
+	width: 16%;
+	height: 2.8%;
+	background-color: #FFFFFF;
+	border: none;
+	font-size: 33px;
+	outline: none;
+}
+.wanji:hover{
+	text-decoration: underline;
+}
+.xiahua{
+	left: 21%;
+	top: 81%;
+	width: 57%;
+	height: 0px;
+	border: 0.5px solid rgba(166, 166, 166, 1);
+}
+.xiahua_text{
+	left: 42.5%;
+	top: 81%;
+	width: 57%;
+	height: 0px;
+	font-size: 20px;
+}
+input[type=search]::-webkit-search-cancel-button{
+    -webkit-appearance: none; 
+	position: relative; 
+	height: 45px; 
+	width: 45px; 
+	border-radius: 50%; 
+	background-image: url(../img/Cross.png);
+	background-size: 100%;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/set.css">       <!--外部链接css-->
+    <title></title>
+</head>
+<body>
+    <div class="app">
+		<div class="konkon"></div>
+        <div class="header">
+			<button onclick="javascript:history.back(-1);"
+			style="width: 6px; height: 30px;opacity: 0;margin-left: 10px;"></button>
+		</div>
+		<img src="img/imag15.png"  style="height: 1px; background-repeat: no-repeat;"/>
+		
+		<div class="sezhi">
+			<ul>
+				<li>
+					<a id="main" href=""><img src="img/imag43.png" style="width: 60px;margin-left: 0px;"/> 地址XXXXXXX</a>
+				</li>
+				<li>
+					<a id="main_1">
+					闹铃提醒
+					<label class="switch-wrap active" for="checkbox">
+					    <span></span>
+					</label>
+					<h2>></h2></a>
+					</a>
+				</li>
+				<li>
+					<a href="">账号安全
+					<h2>></h2>
+					</a>
+				</li>
+				<li>
+					<a href="">支付
+					<h2>></h2></a>
+					</a>
+				</li>
+				<li>
+					<a href="">通用
+					<h2>></h2>
+					</a>
+				</li>
+				<li>
+					<a href="guanyu.html">关于</a>
+				</li>
+			</ul>
+		</div>
+	
+		<div class="kon"></div>
+		<div class="footer">
+			<input id="tuichu" type="button" value="退出账号" onclick="if(confirm('确定要退出账号吗'))window.location.href='index.html'">
+		</div>
+    </div>
+	
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script>
+	  var draw = document.querySelector('.sezhi');
+	  var ul = draw.children[0];
+	
+	  var startY = 0; // 刚触碰到屏幕的时的手指信息
+	  var centerY = 0; // 用来记录每次触摸时上一次的偏移距离
+	  var maxDown = 150; // 设定一个最大向下滑动的距离
+	  var maxUp = 0 // 求得一个最大向上滑动的距离
+	  var maxUpBounce = 0; // 向上反弹值
+	  var maxDownBounce = -(ul.offsetHeight - draw.offsetHeight+ maxDown); // 向下反弹值
+	
+	  // touchstart 时，记录手指在 Y 轴上的落点距离可视顶部距离
+	  ul.addEventListener('touchstart', function (e) {
+	    startY = e.changedTouches[0].clientY;
+	  })
+	
+	  // touchmove 时，记录此时手指在 Y 轴上的落点距离可视顶部距离
+	  ul.addEventListener('touchmove', function (e) {
+	    // 清除过渡
+	    ul.style.transition = 'transform .0s';
+	    // 获取差值
+	    var dy = e.changedTouches[0].clientY - startY;
+	
+	    // 上次的滑动距离加上本次的滑动距离
+	    var tempY = centerY + dy;
+	
+	    // 当上次滑动的距离加上本次滑动的距离 大于 设定的最大向下距离的时候
+	    if (tempY > maxDown) {
+	      tempY = maxDown;
+	    }
+	    // 当上次滑动的距离加上本次滑动的距离 小于 设定的最大向上距离的时候 
+	    else if (tempY < maxUp) {
+	      tempY = maxUp;
+	    }
+	
+	    // 设置 ul 在 Y 轴上的偏移
+	    ul.style.transform = 'translateY(' + tempY + 'px)';
+	  })
+	
+	  // touchend 时，记录此时手指在 Y 轴上的落点距离可视顶部距离
+	  ul.addEventListener('touchend', function (e) {
+	    // 获取差值
+	    var dy = e.changedTouches[0].clientY ;
+	    // 记录移动的距离
+	    centerY = centerY + dy;
+	
+	    // 两次滑动的距离 大于 设定的 向上 反弹值时
+	    if (centerY > maxUpBounce) {
+	      // 让两次滑动的距离 等于 设置的值
+	      centerY = maxUpBounce;
+	      // 添加过渡
+	      ul.style.transition = 'transform .5s';
+	      ul.style.transform = 'translateY(' + centerY + 'px)';
+	    }
+	    // 两次滑动的距离 小于 设定的 向下 反弹值时
+	    else if (centerY < maxDownBounce) {
+	      // 让两次滑动的距离 等于 设置的值
+	      centerY = maxDownBounce;
+	      // 添加过渡
+	      ul.style.transition = 'transform .5s';
+	      ul.style.transform = 'translateY(' + centerY + 'px)';
+	    }
+	  })
+	</script>
+	
+	<script>
+	document.addEventListener("plusready", function() {
+		// 注册返回按键事件
+		plus.key.addEventListener('backbutton', function() {
+			// 事件处理
+			history.back(-1);
+		}, false);
+	});
+	</script>
+	
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+		<script>
+	$(".switch-wrap").click(function(){
+	    if($(this).hasClass("active")){
+	       $(this).removeClass("active");
+	    }else{
+	      $(this).addClass("active");
+	    }
+	})
+		</script>
+</body>
+
+</html>

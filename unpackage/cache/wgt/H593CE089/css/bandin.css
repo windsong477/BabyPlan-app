@@ -1,0 +1,250 @@
+*{
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+.zhuce_back{
+	background-image: url(../img/icon_menu.png);
+	left: 0px;
+	top: 100px;
+	background-repeat: no-repeat;
+	background-size: 8%;
+}
+.zhuce_bg_img{
+	background-image: url(../img/imag46.png);
+	background-repeat: no-repeat;
+	background-position:center 190px;
+	background-size: 130%;
+	
+}
+.zhuce_bg{
+	width: 78%;
+	height: 1300px;
+	margin-top: 50%;
+	margin-left: 11%;
+	background-color: white;
+	box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.3);
+	border-radius: 28px;
+	
+}
+.user{
+	left: 34%;
+	top: 767px;
+	width: 43%;
+	height: 69px;
+	border: none;
+	font-size: 200%;
+}
+.user_bg{
+	left: 21%;
+	top: 765px;
+	width: 57%;
+	height: 70px;
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(245, 183, 183, 1.0);
+	border-radius: 20px;
+}
+.user_line{
+	left: 33.8%;
+	top: 765px;
+	width: 0px;
+	height: 70px;
+	border: 1px solid rgba(245, 183, 183, 1.0);
+
+}
+.user_text{
+	left: 22.5%;
+	top: 785px;
+	font-size: 25px;
+}
+.anser{
+	left: 34%;
+	top: 891px;
+	width: 43%;
+	height: 67px;
+	border: none;
+	font-size: 200%;
+}
+.anser_bg{
+	left: 21%;
+	top: 890px;
+	width: 57%;
+	height: 70px;
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(245, 183, 183, 1.0);
+	border-radius: 20px;
+}
+.anser_line{
+	left: 33.8%;
+	top: 890px;
+	width: 0px;
+	height: 70px;
+	border: 1px solid rgba(245, 183, 183, 1.0);
+}
+.anser_text{
+	left: 23%;
+	top: 910px;
+	font-size: 25px;
+}
+
+.yanzhenma{
+	left: 22%;
+	top: 1141px;
+	width: 26%;
+	height: 67px;
+	border: none;
+	font-size: 200%;
+}
+.yanzhenma_bg{
+	left: 21%;
+	top: 1140px;
+	width: 28%;
+	height: 70px;
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(245, 183, 183, 1.0);
+	border-radius: 20px;
+}
+.huoquyanzhengma{
+	left: 55.5%;
+	top: 1133px;
+	width: 23%;
+	height: 85px;
+	background: linear-gradient(80deg, rgba(255, 195, 0, 1) 0%, rgba(244, 255, 14, 1) 100%);
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, .5);
+	border-radius: 71px;
+	font-size: 30px;
+	border: none;
+	outline: none;
+}
+.huoquyanzhengma:hover{
+	left: 55.5%;
+	top: 1133px;
+	width: 23%;
+	height: 85px;
+	background: linear-gradient(80deg, rgba(239, 179, 0, 1.0) 0%, rgba(255, 226, 2, 1.0) 100%);
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, .5);
+	border-radius: 71px;
+	font-size: 30px;
+	border: none;
+}
+.btn{
+	left: 35%;
+	top: 1300px;
+	width: 30%;
+	height: 120px;
+	background: linear-gradient(90deg, rgba(236, 96, 113, 1) 0%, rgba(252, 135, 131, 1.0) 100%);
+	box-shadow: 0px 6px 8px rgba(0, 0, 0, .5);
+	border-radius: 50px;
+	font-size: 38px;
+	border: none;
+	color: white;
+}
+.btn:hover{
+	left: 35%;
+	top: 1300px;
+	width: 30%;
+	height: 120px;
+	background: linear-gradient(90deg, rgba(236, 59, 112, 1.0) 0%, rgba(252, 144, 125, 1.0) 100%);
+	box-shadow: 0px 6px 8px rgba(0, 0, 0, .5);
+	border-radius: 50px;
+	font-size: 38px;
+	border: none;
+	outline: none;
+	color: white;
+}
+.xiahua{
+	left: 21%;
+	top: 1470px;
+	width: 57%;
+	height: 0px;
+	border: 0.5px solid rgba(166, 166, 166, 1);
+}
+.xiahua_text{
+	left: 42.5%;
+	top: 1472px;
+	width: 57%;
+	height: 0px;
+	font-size: 20px;
+}
+input[type=search]::-webkit-search-cancel-button{
+    -webkit-appearance: none; 
+	position: relative; 
+	height: 45px; 
+	width: 45px; 
+	border-radius: 50%; 
+	background-image: url(../img/Cross.png);
+	background-size: 100%;
+}
+.select_bg{
+	left: 21%;
+	top: 1015px;
+	width: 25%;
+	height: 70px;
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(245, 183, 183, 1.0);
+	border-radius: 20px;
+}
+.select_text{
+	left: 23%;
+	top: 1035px;
+	font-size: 25px;
+}
+.select_line{
+	left: 33.8%;
+	top: 1015px;
+	width: 0px;
+	height: 70px;
+	border: 1px solid rgba(245, 183, 183, 1.0);
+}
+.select{
+	float: left;
+	width: 90px;
+	height: 50px;
+	left: 35%;
+	top: 1024px;
+	font-size: 32px;
+	color: #000;
+	text-indent: 0.1em;
+	border: none;
+	appearance: none;
+	outline: none;
+	z-index: 99;
+}
+
+.select_bg_2{
+	left: 52%;
+	top: 1015px;
+	width: 25%;
+	height: 70px;
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(245, 183, 183, 1.0);
+	border-radius: 20px;
+}
+.select_text_2{
+	left: 54%;
+	top: 1035px;
+	font-size: 25px;
+}
+.select_line_2{
+	left: 65.8%;
+	top: 1015px;
+	width: 0px;
+	height: 70px;
+	border: 1px solid rgba(245, 183, 183, 1.0);
+}
+.select_2{
+	float: left;
+	width: 90px;
+	height: 50px;
+	left: 67%;
+	top: 1024px;
+	font-size: 30px;
+	color: #000;
+	text-indent: 0.2em;
+	border: none;
+	appearance: none;
+	outline: none;
+	z-index: 99;
+}

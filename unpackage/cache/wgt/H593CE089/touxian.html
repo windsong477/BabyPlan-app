@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/touxian.css">       <!--外部链接css-->
+    <title></title>
+</head>
+<body>
+    <div class="app">
+		<div class="konkon"></div>
+        <div class="header">
+			<button onclick="javascript:history.back(-1);"
+			style="width: 6px; height: 30px;opacity: 0;margin-left: 10px;"></button>
+		</div>
+		
+		<div class="con_1">
+			<h2>头像</h2>
+			<img  id="my_photo" src="img/imag43.png"  style="width: 120px;margin-left: 30%;"/>
+			<input id="avatar_file" type="file" accept="image/*" capture="camera">
+		</div>
+		<div class="footer">
+			<br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;家长姓名:<input type="text" maxlength="8" style="margin-left: 5px; border-top: none;border-left: none;border-right: none; background-color: #ffe0e0; outline: none;" /><br /><br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;宝宝姓名:<input type="text" maxlength="8" style="margin-left: 5px; border-top: none;border-left: none;border-right: none; background-color: #ffe0e0;outline: none;" /><br /><br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;宝宝年龄:<input type="text" maxlength="2" style="margin-left: 5px; border-top: none;border-left: none;border-right: none; background-color: #ffe0e0;outline: none;" /><br /><br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;家长电话:<input type="text" maxlength="11" style="margin-left: 5px; border-top: none;border-left: none;border-right: none; background-color: #ffe0e0;outline: none;" /><br /><br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;接送地址:<input type="text" maxlength="20" style="margin-left: 5px; border-top: none;border-left: none;border-right: none; background-color: #ffe0e0;outline: none;" /><br /><br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;备用电话:<input type="text" maxlength="11" style="margin-left: 5px; border-top: none;border-left: none;border-right: none; background-color: #ffe0e0;outline: none;" />
+		</div>
+    </div>
+	
+	
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script>
+	$("#avatar_file").change(function() { //avatar_file  input[file]的ID
+	        // 获取上传文件对象
+	        var file = $(this)[0].files[0];
+	        // 读取文件URL
+	        var reader = new FileReader();
+	        reader.readAsDataURL(file);
+	        // 阅读文件完成后触发的事件
+	        reader.onload = function() {
+	            // 读取的URL结果：this.result
+	            $("#avatar_file").hide()
+	            $("#my_photo").attr("src", this.result).show(); //avatar_img  img标签的ID
+	        }
+	});
+	</script>
+	
+	<script>
+	document.addEventListener("plusready", function() {
+		// 注册返回按键事件
+		plus.key.addEventListener('backbutton', function() {
+			// 事件处理
+			history.back(-1);
+		}, false);
+	});
+	</script>
+	
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+ 
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>评价</title>
+		<link rel="stylesheet" href="css/pinjia.css" type="text/css"/>
+		<script type="text/javascript" src="js/jquery-1.8.2.min.js" ></script>
+	</head>
+	
+	<body>
+		<!--头部  star-->
+		<header>
+			<a href="javascript:history.go(-1);">
+				<div class="_left"><img src="img/icon_menu.png" style="width: 30px;height: 30px;"></div>
+				   评价
+			</a>
+		</header>
+		<!--头部 end-->
+        <!--内容 star-->
+		<div class="contaniner fixed-cont">
+			<!--1-->
+			<div class="baioti">
+				<h1>宝宝巴士托管班</h1>
+				<div class="slide-box">
+					<div class="slide-item1"></div>
+					<div class="slide-item2"></div>
+					<div class="slide-item3"></div>
+					<div class="slide-item4"></div>
+					<div class="slide-item5"></div>
+					<div class="slide-item6"></div>
+					<div class="slide-item7"></div>
+				</div>
+			</div>
+			
+				
+			<section class="assess">
+				<p>
+					<textarea rows="7" placeholder="请写下对此次订单的评价吧，对我们帮助很大哦～～"></textarea>
+				</p>
+				<ul>
+					<li>评价</li>
+					<li class="assess-right">
+						<div><input type="radio" name="radio" value="radio1"/>满意</div>
+						<div><input type="radio" name="radio" value="radio2"/>一般</div>
+						<div><input type="radio" name="radio" value="radio3"/>较差</div>
+					</li>
+				</ul>
+			</section>
+			<!--2-->
+			<section class="main">
+			<div class="main-wrap">
+				<span class="revtit">综合评分:</span>
+				<div id="mydiv1" currentIndex="0" class="mydiv">
+	    			<ul class="star_ul">
+				        <li num="1"><img src="img/imag24_empty.png" class="xing_hui"/></li>
+				        <li num="2"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="3"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="4"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="5"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+			   		</ul>
+				</div>
+			</div>
+			
+			<div class="main-wrap">
+				<span class="revtit">接送速度:</span>
+				<div id="mydiv2" currentIndex="0" class="mydiv">
+	    			<ul class="star_ul">
+				        <li num="1"><img src="img/imag24_empty.png" class="xing_hui"/></li>
+				        <li num="2"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="3"><img src="img/imag24_empty.png" class="xing_hui"/></li>
+				        <li num="4"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="5"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+			   		</ul>
+				</div>
+			</div>
+		
+			<div class="main-wrap">
+				<span class="revtit">仪容着装:</span>
+				<div id="mydiv3" currentIndex="0" class="mydiv">
+	    			<ul class="star_ul">
+				        <li num="1"><img src="img/imag24_empty.png" class="xing_hui"/></li>
+				        <li num="2"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="3"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="4"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="5"><img src="img/imag24_empty.png" class="xing_hui"/></li>
+			   		</ul>
+				</div>
+			</div>
+			
+			<div class="main-wrap">
+				<span class="revtit">服务质量:</span>
+				<div id="mydiv4" currentIndex="0" class="mydiv">
+					<ul class="star_ul">
+				        <li num="1"><img src="img/imag24_empty.png" class="xing_hui"/></li>
+				        <li num="2"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="3"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="4"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="5"><img src="img/imag24_empty.png" class="xing_hui"/></li>
+			   		</ul>
+				</div>
+			</div>
+			
+			<div class="main-wrap">
+				<span class="revtit">孩子评价:</span>
+				<div id="mydiv5" currentIndex="0" class="mydiv">
+					<ul class="star_ul">
+				        <li num="1"><img src="img/imag24_empty.png" class="xing_hui"/></li>
+				        <li num="2"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="3"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="4"><img src="img/imag24_empty.png"  class="xing_hui"/></li>
+				        <li num="5"><img src="img/imag24_empty.png" class="xing_hui"/></li>
+			   		</ul>
+				</div>
+			</div>
+	</section>
+		</div>
+		<!--内容 end-->
+        
+        <!--底部 star-->
+		<footer class="assess-footer fixed-footer ">
+			<ul>
+				<li>
+					<input type="checkbox" id="ass" />
+					<label for="ass" onselectstart="return false">匿名评价</label>
+				</li>
+				<input id="button" type="button" value="发表评论" />
+			</ul>
+		</footer>
+       <!--底部  end-->
+	   
+	   <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+				$(".assess-footer ul li label").on('touchstart',function(){
+			if($(this).hasClass('assd')){
+				$(".assess-footer ul li label").removeClass("assd")
+			}else{
+				$(".assess-footer ul li label").addClass("assd")
+			};
+		});
+			
+//匿名评价
+        var isclick = false;
+        function change(mydivid,num) {
+            if (!isclick) {
+                var tds = $("#"+mydivid+" ul li");
+                for (var i = 0; i < num; i++) {
+                    var td = tds[i];
+                    $(td).find("img").attr("src","img/imag24_full.png");
+                }
+                var tindex = $("#"+mydivid).attr("currentIndex");
+                tindex = tindex==0?0:tindex+1;
+                for (var j = num; j < tindex; j++) {
+                    var td = tds[j];
+                    $(td).find("img").attr("src","img/imag24_empty.png");
+                }
+                $("#"+mydivid).attr("currentIndex",num);
+            }
+        }
+        function repeal(mydivid,num) {
+            if (!isclick) {
+                var tds = $("#"+mydivid+" ul li");
+                var tindex = $("#"+mydivid).attr("currentIndex");
+                tindex = tindex==0?0:tindex+1;
+                for (var i = tindex; i < num; i++) {
+                    var td = tds[i];
+                    $(td).find("img").attr("src","img/imag24_empty.png");
+                }
+                $("#"+mydivid).attr("currentIndex",num);
+            }
+        }
+        function change1(mydivid,num) {
+            if (!isclick) {
+                change(mydivid,num);
+ 
+            }
+            else {
+                alert("Sorry,You had clicked me!");
+            }
+        }
+        $(function(){
+            initEvent('mydiv1');
+            initEvent('mydiv2');
+            initEvent('mydiv3');
+			initEvent('mydiv4');
+			initEvent('mydiv5');
+        });
+        function initEvent(mydivid) {
+            var tds = $("#"+mydivid+" ul li");
+            for (var i = 0; i < tds.length; i++) {
+                var td = tds[i];
+                $(td).on('mouseover',function() {
+                                  var num = $(this).attr("num");change(mydivid,num);
+                                });
+                                $(td).on('click',function() {
+                                  var num = $(this).attr("num");change1(mydivid,num);
+                                });
+            }
+        }
+		
+		</script>
+		
+		<script>
+		var btn = document.getElementById('button');
+		btn.onclick = function(){
+		        alert('目前功能还在完善中···');
+		    }
+		</script>
+		
+		<script>
+		document.addEventListener("plusready", function() {
+			// 注册返回按键事件
+			plus.key.addEventListener('backbutton', function() {
+				// 事件处理
+				history.back(-1);
+			}, false);
+		});
+		</script>
+	</body>
+ 
+</html>

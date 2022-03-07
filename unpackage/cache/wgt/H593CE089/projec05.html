@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/projec05.css">       <!--外部链接css-->
+    <title>注册</title>
+</head>
+<body>
+    <div class="app" style="background-image: url(img/imag07.png); 
+	background-size: 105%;background-repeat: no-repeat;margin-top: 1%;background-position: center 0%;">
+	<div class="header">帮助</div>
+	<div class="map_ban">
+		<div class="map_bg_ban_exemple"></div>
+		<div class="user_bg">
+			<div class="button_user"style="background-image: url(img/zhuce01.png);
+			background-repeat: no-repeat;background-size: 60%;background-position: 36% 50%;">
+			<input class="user" type="search"
+			maxlength="11" step="0.000000000000000001" enterkeyhint="done" pattern="[0-9]*" autocomplete="off">
+			</div>
+		</div>
+		<div class="kon1"></div>
+		<div class="anser_bg">
+			<div class="button_anser"style="background-image: url(img/zhuce02.png);
+			background-repeat: no-repeat;background-size: 60%;background-position: 36% 50%;">
+			<input class="anser" type="password"
+			 maxlength="20" step="" enterkeyhint="done" autocomplete="off" >
+			</div>
+		</div>
+		<input class="btn"type="submit"value="登录" onclick="window.location.href='projec05.html'">
+	</div>
+ 
+    </div>
+	
+	<script>
+	// callback 参数要传一个function
+	  var plusReady = function (callback) {
+	    if (window.plus) {
+	      callback();
+	    } else {
+	      document.addEventListener('plusready', callback);
+	    }
+	  };
+	//plusReady是一个function
+	  plusReady(function () {
+	    var firstBack = 0;
+	    var handleBack = function () {
+	      var currentWebview = plus.webview.currentWebview();
+	      var topWebview = plus.webview.getTopWebview();
+	      var now = Date.now || function () {
+	        return new Date().getTime();
+	      };
+	      currentWebview.canBack(function (evt) {
+	        /**  
+	         * 有可后退的历史记录，则后退。  
+	         * 否则，关闭当前窗口。  
+	         * 如果当前窗口是入口页，那么执行退出的逻辑。  
+	         */
+	        if (currentWebview.id === plus.runtime.appid) {
+	          if (!firstBack) {
+	            firstBack = now();
+	            plus.nativeUI.toast('再按一次退出应用');
+	
+	            // 定时俩秒内
+	            setTimeout(function () {
+	              firstBack = 0;
+	            }, 2000);
+	          } else if (now() - firstBack < 2000) {
+	            // 退出应用
+	            plus.runtime.quit();
+	          }
+	        } else {
+	          // canBack: 查询Webview窗口是否可后退
+	          if (evt.canBack) {
+	            history.back(-1);
+	          } else {
+	            currentWebview.close('auto');
+	          }
+	        }
+	      });
+	    };
+	    // backbutton判断物理返回键
+	    plus.key.addEventListener('backbutton', handleBack);
+	  });  
+	</script>
+	
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function () {undefined
+	　　$('body').height($('body')[0].clientHeight);
+	});
+	</script>
+</body>
+
+</html>

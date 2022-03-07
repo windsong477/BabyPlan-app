@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/xinxi.css">       <!--外部链接css-->
+    <title>信息</title>
+</head>
+<body>
+    <div class="app">
+        <div class="header"></div>
+        <div class="con">
+			<ul>
+				<li>
+					<a href="liaotian01.html">
+						<div class="temp1"></div>
+					</a>
+				</li>
+				<li>
+					<a href="liaotian02.html">
+						<div class="temp2"></div>
+					</a>
+				</li>
+				<li>
+					<a href="liaotian03.html">
+						<div class="temp3"></div>
+					</a>
+				</li>
+				<li>
+					<a href="liaotian04.html">
+						<div class="temp4"></div>
+					</a>
+				</li>
+				<li>
+					<a href="liaotian05.html">
+						<div class="temp5"></div>
+					</a>
+				</li>
+				<li>
+					<a href="liaotian06.html">
+						<div class="temp6"></div>
+					</a>
+				</li>
+			</ul>
+            	
+        </div>
+        <div class="footer">
+			<input class="main_bg_main_button" type="button"onclick="window.location.href='main.html'">
+			<input class="main_bg_map_button" type="button" onclick="window.location.href='map.html'">
+			<input class="main_bg_xinxi_button" type="button" >
+			<input class="main_bg_dindan_button" type="button" onclick="window.location.href='dindan.html'">
+			<input class="main_bg_wode_button" type="button" onclick="window.location.href='wode.html'">
+		</div>
+    </div>
+	
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script>
+	  var draw = document.querySelector('.con');
+	  var ul = draw.children[0];
+	
+	  var startY = 0; // 刚触碰到屏幕的时的手指信息
+	  var centerY = 0; // 用来记录每次触摸时上一次的偏移距离
+	  var maxDown = 150; // 设定一个最大向下滑动的距离
+	  var maxUp = 0 // 求得一个最大向上滑动的距离
+	  var maxUpBounce = 0; // 向上反弹值
+	  var maxDownBounce = -(ul.offsetHeight - draw.offsetHeight+ maxDown); // 向下反弹值
+	
+	  // touchstart 时，记录手指在 Y 轴上的落点距离可视顶部距离
+	  ul.addEventListener('touchstart', function (e) {
+	    startY = e.changedTouches[0].clientY;
+	  })
+	
+	  // touchmove 时，记录此时手指在 Y 轴上的落点距离可视顶部距离
+	  ul.addEventListener('touchmove', function (e) {
+	    // 清除过渡
+	    ul.style.transition = 'transform .5s';
+	    // 获取差值
+	    var dy = e.changedTouches[0].clientY - startY;
+	
+	    // 上次的滑动距离加上本次的滑动距离
+	    var tempY = centerY + dy;
+	
+	    // 当上次滑动的距离加上本次滑动的距离 大于 设定的最大向下距离的时候
+	    if (tempY > maxDown) {
+	      tempY = maxDown;
+	    }
+	    // 当上次滑动的距离加上本次滑动的距离 小于 设定的最大向上距离的时候 
+	    else if (tempY < maxUp) {
+	      tempY = maxUp;
+	    }
+	
+	    // 设置 ul 在 Y 轴上的偏移
+	    ul.style.transform = 'translateY(' + tempY + 'px)';
+	  })
+	
+	  // touchend 时，记录此时手指在 Y 轴上的落点距离可视顶部距离
+	  ul.addEventListener('touchend', function (e) {
+	    // 获取差值
+	    var dy = e.changedTouches[0].clientY ;
+	    // 记录移动的距离
+	    centerY = centerY + dy;
+	
+	    // 两次滑动的距离 大于 设定的 向上 反弹值时
+	    if (centerY > maxUpBounce) {
+	      // 让两次滑动的距离 等于 设置的值
+	      centerY = maxUpBounce;
+	      // 添加过渡
+	      ul.style.transition = 'transform .5s';
+	      ul.style.transform = 'translateY(' + centerY + 'px)';
+	    }
+	    // 两次滑动的距离 小于 设定的 向下 反弹值时
+	    else if (centerY < maxDownBounce) {
+	      // 让两次滑动的距离 等于 设置的值
+	      centerY = maxDownBounce;
+	      // 添加过渡
+	      ul.style.transition = 'transform .5s';
+	      ul.style.transform = 'translateY(' + centerY + 'px)';
+	    }
+	  })
+	</script>
+	
+	<script>
+	// callback 参数要传一个function
+	  var plusReady = function (callback) {
+	    if (window.plus) {
+	      callback();
+	    } else {
+	      document.addEventListener('plusready', callback);
+	    }
+	  };
+	//plusReady是一个function
+	  plusReady(function () {
+	    var firstBack = 0;
+	    var handleBack = function () {
+	      var currentWebview = plus.webview.currentWebview();
+	      var topWebview = plus.webview.getTopWebview();
+	      var now = Date.now || function () {
+	        return new Date().getTime();
+	      };
+	      currentWebview.canBack(function (evt) {
+	        /**  
+	         * 有可后退的历史记录，则后退。  
+	         * 否则，关闭当前窗口。  
+	         * 如果当前窗口是入口页，那么执行退出的逻辑。  
+	         */
+	        if (currentWebview.id === plus.runtime.appid) {
+	          if (!firstBack) {
+	            firstBack = now();
+	            plus.nativeUI.toast('再按一次退出应用');
+	
+	            // 定时俩秒内
+	            setTimeout(function () {
+	              firstBack = 0;
+	            }, 2000);
+	          } else if (now() - firstBack < 2000) {
+	            // 退出应用
+	            plus.runtime.quit();
+	          }
+	        } else {
+	          // canBack: 查询Webview窗口是否可后退
+	          if (evt.canBack) {
+	            history.back(-1);
+	          } else {
+	            currentWebview.close('auto');
+	          }
+	        }
+	      });
+	    };
+	    // backbutton判断物理返回键
+	    plus.key.addEventListener('backbutton', handleBack);
+	  });  
+	
+	
+	
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>绑定页面</title>
+		<link rel="stylesheet" type="text/css" href="css/bandin.css">       <!--外部链接css-->
+	</head>
+	<body>
+		<div class ="zhuce">
+			<div class="zhuce_back" >
+				<div style="background-image: url(img/imag25.png);
+				background-repeat: no-repeat; background-size:10%; background-position: 98% 110px;"></div>
+			</div>
+			
+			
+			<div class ="zhuce_bg">
+				<div style="background-image: url(img/imag47.png); 
+				background-repeat: no-repeat;background-position: center 580px; background-size: 30%;">
+			</div>
+				
+				
+				<div class="user_bg">
+					<div class="user_text">您的姓名</div>
+				</div>
+				<div class="user_line"></div>
+				
+				<div class="anser_bg"></div>
+				    <div class="anser_text">宝宝姓名</div>
+				<div class="anser_line"></div>
+				
+				<div class="select_bg"></div>
+				    <div class="select_text">宝宝年龄</div>
+				<div class="select_line"></div>
+				<select class="select">
+					<option value ="" style="font-size: 7px;">3岁</option>
+					<option value ="" style="font-size: 7px;">4岁</option>
+					<option value ="" style="font-size: 7px;">5岁</option>
+					<option value ="" style="font-size: 7px;">6岁</option>
+					<option value ="" style="font-size: 7px;">7岁</option>
+					<option value ="" style="font-size: 7px;">8岁</option>
+				</select >
+					
+				<div class="select_bg_2"></div>
+				    <div class="select_text_2">宝宝性别</div>
+				<div class="select_line_2"></div>
+				<select class="select_2">
+					<option value ="" style="font-size: 7px;">男</option>
+					<option value ="" style="font-size: 7px;">女</option>
+				</select >
+					
+					
+				<div class="yanzhenma_bg"></div>
+			
+				
+				<div class="xiahua"></div>
+				<div class="xiahua_text">使用第三方注册</div>
+				<div style="background-image: url(img/imag02.png);
+				background-repeat: no-repeat;background-position: center 1600px; background-size: 6%;"> </div>
+				
+				<div class ="zhuce_bg_img"></div>
+	
+	            <input class="huoquyanzhengma"type="submit"value="连接腕带" >
+				<input class="btn"type="submit"value="确认绑定" onclick="window.location.href='main.html'">
+				<input class="user" type="search"
+				maxlength="11" " enterkeyhint="done"  autocomplete="off">
+		
+				<input class="anser" type="text" 
+				maxlength="11"  enterkeyhint="done" autocomplete="off" >
+				
+			
+				<input class="yanzhenma" type="text" placeholder="智能腕带ID"
+				maxlength="6" step="0.000000000000000001" enterkeyhint="done" pattern="[0-9]*" autocomplete="off">
+			</div>
+			<button onclick="javascript:history.back(-1);"
+			style="width: 5%; height: 3%; top: 4.5%;left: 2.2%;opacity: 0;"></button>
+		</div>
+		
+	<script>
+	document.addEventListener("plusready", function() {
+		// 注册返回按键事件
+		plus.key.addEventListener('backbutton', function() {
+			// 事件处理
+			history.back(-1);
+		}, false);
+	});
+	</script>
+	
+
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script>
+
+	</script>
+	</body>
+</html>
